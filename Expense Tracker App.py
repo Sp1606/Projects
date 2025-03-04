@@ -473,4 +473,3 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = FinanceTracker(root)
     root.protocol("WM_DELETE_WINDOW", lambda: (app.close_db_connection(), root.destroy())) #Handle closing the window
-    root.mainloop()

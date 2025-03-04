@@ -158,4 +158,3 @@ if __name__ == "__main__":
     root.geometry("400x300")  # width x height
 
     gui = CurrencyConverterGUI(root)
-    root.mainloop()
