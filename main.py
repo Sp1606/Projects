@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> e8d6c9b6cbfed663531c52fc3cab30cf168a4201
 from kivy.app import App
 from kivy.uix.label import Label
 
@@ -7,4 +11,14 @@ class MyApp(App):
         return Label(text="Hello, Kivy!")
 
 if __name__ == "__main__":
+=======
+from kivy.app import App
+from kivy.uix.label import Label
+
+class MyApp(App):
+    def build(self):
+        return Label(text="Hello, Kivy!")
+
+if __name__ == "__main__":
+>>>>>>> 3b02cf551ec84237dd5a8f1c782cdd8f9f5699b9
     MyApp().run()
