@@ -1,133 +1,90 @@
-# Mindplay Family 🧠✨
+# Shanmukha's Project Hub 🚀
 
-A beautiful, interactive Flutter quiz application designed to engage both kids and parents in collaborative, adaptive brain training. Spark curiosity, challenge cognitive skills, and track progress together as a family!
-
----
-
-## 🌟 Project Overview
-
-**Mindplay Family** is an educational and entertainment platform built with Flutter. It adapts to the player's age and level, providing tailored question sets across various subjects. 
-
-The application implements a custom offline database layer using JSON-serialized `SharedPreferences` to manage user profiles, sessions, quiz history, and progressive level-unlock systems locally and securely.
+Welcome to my personal project workspace! This repository contains a curated collection of Python projects spanning **Artificial Intelligence & Machine Learning**, **Interactive GUI Applications**, and **Arcade Games**.
 
 ---
 
-## 🚀 Key Features
-
-*   **🔒 Offline Authentication & User Profiles**
-    *   Register, sign in, and persist user profiles locally.
-    *   Saves names, emails, phone numbers, and child age groups.
-*   **🎭 Dual Mode Dashboard (Kids vs. Parents)**
-    *   **Kids Quest Mode:** Vibrant, gamified, child-safe interface featuring age-appropriate questions (ages 4-15).
-    *   **Parents Discovery Mode:** Sleek, mature theme hosting advanced cognitive tasks, logic puzzles, and trivia.
-*   **🎯 Adaptive Question Filtering**
-    *   Dynamic level-unlocking system up to Level 25 per category.
-    *   Age-gate fallbacks that filter questions based on the child's age range (`minAge` and `maxAge`).
-*   **🧮 Dynamic Math Question Generator**
-    *   Auto-generates arithmetic questions dynamically matching the selected level:
-        *   *Levels 1-10:* Addition challenges.
-        *   *Levels 11-20:* Subtraction challenges.
-        *   *Levels 21-50:* Multiplication challenges.
-*   **📚 Rich Topic Categories**
-    *   Math, Science, History, Geography, Arts, Technology, Mixed Mode, and **Daily Challenges**.
-*   **📊 Score Card & Progress Tracker**
-    *   Historical tracking of quiz attempts.
-    *   Shows a visual breakdown of completed quizzes, scores, and next level unlocks.
-*   **🌐 Online Quiz Flow**
-    *   Interactive skeleton flow for multiplayer / online match-making quizzes.
-
----
-
-## 🛠️ Tech Stack
-
-*   **Framework:** [Flutter](https://flutter.dev/) (SDK version `^3.10.7` using Material 3 design)
-*   **Language:** [Dart](https://dart.dev/)
-*   **Local Storage & Session Persistence:** `shared_preferences` (configured as a serialized database)
-*   **Typography:** Google Fonts (Roboto)
-
----
-
-## 📁 Project Directory Structure
+## 📁 Repository Directory Structure
 
 ```text
-lib/
-├── main.dart                      # App entry point & theme initialization
-├── core/
-│   ├── data/
-│   │   ├── question_generator.dart # Dynamic math generator & option shuffler
-│   │   └── quiz_data.dart          # Static quiz datasets and filter logic
-│   ├── models/
-│   │   ├── question_model.dart     # Question & option structures
-│   │   └── user_model.dart         # User profile & QuizAttempt schemas
-│   ├── services/
-│   │   └── auth_service.dart       # Local registration, login & level unlock logic
-│   └── theme/
-│       └── category_theme.dart     # Visual category-specific styles
-└── features/
-    ├── auth/
-    │   └── login_screen.dart       # Authentication UI
-    ├── home/
-    │   └── home_screen.dart        # Mode switching, daily challenges, and category navigation
-    └── quiz/
-        ├── kids_quiz_screen.dart   # Interactive quiz engine for kids
-        ├── parents_quiz_screen.dart # Advanced quiz engine for parents
-        ├── level_selection_screen.dart # Progress mapping screen (Levels 1-25)
-        ├── online_quiz_flow.dart   # Stub UI for online matchmaking
-        ├── result_screen.dart      # Score breakdowns and animation triggers
-        └── score_card.dart         # Historical score tracking dashboard
+Projects/
+├── README.md               # Repository overview (this file)
+├── .gitignore              # Ignored local files (.DS_Store, etc.)
+├── project_venv/           # Python virtual environment containing packages
+└── python_projects/
+    └── Python/             # Folder containing all Python scripts and datasets
 ```
 
 ---
 
-## ⚙️ Installation & Setup Steps
+## 🤖 1. AI & Machine Learning Projects
 
-### Prerequisites
+These applications demonstrate data analysis, predictive modeling, computer vision, and NLP (Natural Language Processing).
 
-Make sure you have Flutter installed on your system. Verify your setup with:
-```bash
-flutter doctor
-```
-
-### Run Locally
-
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/Sp1606/mindplay-family-app.git
-   cd mindplay-family-app
-   ```
-
-2. **Fetch Dependencies:**
-   ```bash
-   flutter pub get
-   ```
-
-3. **Launch the Application:**
-   Ensure an emulator or physical device is connected, then run:
-   ```bash
-   flutter run
-   ```
-
-### Build Releases
-
-*   **Android Release APK:**
-    ```bash
-    flutter build apk
-    ```
-*   **iOS Release Build:**
-    ```bash
-    flutter build ios
-    ```
+*   **📊 AI-Driven Customer Segmentation** (`AI-DRIVEN CUSTOMER SEGMENTATION .py` & `End To End AI Powered Segmentation.py`)
+    *   *Description:* Analyzes the `Mall_Customers.csv` dataset. Uses **K-Means Clustering**, **StandardScaler** scaling, and **PCA (Principal Component Analysis)** dimensionality reduction to group customers by spending behavior, visualized using Matplotlib and Seaborn.
+*   **🎥 YouTube Video Summarizer** (`yt_video_summarizer.py`)
+    *   *Description:* An automated script that downloads YouTube video audio using `yt_dlp`, transcribes the speech to text using `pydub` and the Python `SpeechRecognition` library, and then generates structured summaries using Hugging Face's `transformers` pipelines.
+*   **✌️ ML Hand Gesture Recognition** (`ML Gesture.py`)
+    *   *Description:* A computer vision script that uses OpenCV to capture real-time webcam feeds and training data, converting hand gestures to classify Rock, Paper, Scissors using a **K-Nearest Neighbors (KNN)** classifier.
+*   **🌸 Iris Flower Classifier** (`Iris flower classifier.py`)
+    *   *Description:* Implements a classic classification algorithm to categorize Iris species based on sepal and petal measurements.
+*   **🎬 Movie Recommendation System** (`Movie recomendation system.py`)
+    *   *Description:* Analyzes movie features and preferences to generate tailored recommendations.
 
 ---
 
-## 📸 Screenshots Section
+## 🖥️ 2. Desktop & GUI Applications (Tkinter & Kivy)
 
-*Add your app screenshots here once running on a simulated or physical device:*
+Interactive tools designed with clean desktop user interfaces.
 
-| 👦 Kids Quiz Screen | 👩 Parents Quiz Screen | 📊 Score Card Dashboard |
-|:---:|:---:|:---:|
-| *[Screenshot Placeholder]* | *[Screenshot Placeholder]* | *[Screenshot Placeholder]* |
+*   **💳 SQLite Expense Tracker** (`Expense Tracker App.py`)
+    *   *Description:* A feature-rich desktop dashboard built with **Tkinter** and **SQLite**. Allows users to add income/expense transactions, specify categories, track monthly savings, and view graphical reports.
+*   **🌦️ Weather Reporter App** (`Wheather APP.py`)
+    *   *Description:* Interacts with weather APIs to display current temperatures, forecasts, and humidity details in a visual interface.
+*   **🧩 CAPTCHA Generator** (`CAPTCHA Generator.py` & `captcha.png`)
+    *   *Description:* Dynamically generates random alphanumeric text and distorts it into image formats to simulate security verification flows.
+*   **🧮 Calculator & Currency Converter** (`Calculator App.py` & `currency calculatar.py`)
+    *   *Description:* Desktop tools for performing everyday calculations and live currency exchanges.
+*   **⏳ Waste Time Converter** (`waste time converter.py`)
+    *   *Description:* A tracker designed to analyze, convert, and visualize time spent on unproductive tasks.
 
 ---
 
-Developed with ❤️ for family learning.
+## 🎮 3. Interactive Games
+
+Fun, interactive terminal and graphical games.
+
+*   **🧩 Sudoku Solver & Game** (`sudoku_game.py` & `sudoku_logic.py`)
+    *   *Description:* A fully playable Sudoku game built using Python, complete with backtracking board solving logic to help players check their moves or solve boards automatically.
+*   **🪓 Hangman Game** (`Hangman.py`)
+    *   *Description:* A terminal-based word-guessing game featuring classic hangman visuals.
+*   **🎯 Classic Games Hub** (`games.py`)
+    *   *Description:* A package of assorted classic minigames.
+
+---
+
+## 🛠️ Getting Started
+
+To run these applications, ensure you have the virtual environment activated or install the required packages.
+
+### Setting Up a Virtual Environment
+
+1. **Activate the existing virtual environment:**
+   * **macOS/Linux:**
+     ```bash
+     source project_venv/bin/activate
+     ```
+   * **Windows:**
+     ```bash
+     project_venv\Scripts\activate
+     ```
+
+2. **Install required packages (as needed per script):**
+   ```bash
+   pip install pandas numpy scikit-learn matplotlib seaborn opencv-python speechrecognition pydub transformers yt-dlp Kivy
+   ```
+
+---
+
+Developed with 💻 and 🐍.
